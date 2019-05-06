@@ -1121,6 +1121,48 @@ class NumpyDocstringTest(BaseDocstringTest):
         """
         Single line summary
 
+        Returns
+        -------
+        foo : str
+            Description of return value
+        """,
+        """
+        Single line summary
+
+        :returns: **foo** (*str*) -- Description of return value
+        """
+    ), (
+        """
+        Single line summary
+
+        Returns
+        -------
+        Description of return value
+        """,
+        """
+        Single line summary
+
+        :returns: Description of return value
+        """
+    ), (
+        """
+        Single line summary
+
+        Returns
+        -------
+        Extended
+        description of return value
+        """,
+        """
+        Single line summary
+
+        :returns: Extended
+                  Description of return value
+        """
+    ), (
+        """
+        Single line summary
+
         Parameters
         ----------
         arg1:str
